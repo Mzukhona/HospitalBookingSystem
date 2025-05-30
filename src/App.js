@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import React,{useState} from 'react';
+import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
+import Layout from './components/layout/Layout';
+import Login from './pages/Login/Login';
+import AppointmentBooking from './pages/AppointmentBooking/AppointmentBooking';
+import UserRegistration from './pages/Register/UserRegistration';
+import PatientDashboard from './pages/PatientDashboard/PatientDashboard';
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      
+     <Layout>
+      <Routes>
+     <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path='/login' element={<Login/>} />
+          <Route path="/register" element={<UserRegistration/>} />
+          <Route path="/appointmentbooking" element={<AppointmentBooking/>} />
+          <Route path="/patientDashboard" element={<PatientDashboard/>} />
+      </Routes>
+       
+     </Layout>
+   </div>
   );
 }
 
