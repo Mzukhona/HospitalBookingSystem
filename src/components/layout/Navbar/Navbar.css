@@ -12,18 +12,14 @@
   
 }
 .nav {
-  position: fixed;
-  top: 0;
-  background-color: #0e5ca9;
+  
+  background-color: #0e5ca9 !important;
 }
 .container {
   padding-left: "8px";
   margin-left: "2px";
 }
-ChevronDownIcon
-{
-  box-decoration-break: none;
-}
+
 .icons:hover {
   cursor: pointer;
 }

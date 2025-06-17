@@ -57,98 +57,143 @@ const Home = () => {
       </div>
       <div id="features" className=" text-center transition-all duration-1000">
         <div className="p-4 text-center">
-          <div className="row">
-            {" "}
-            <div className="col-lg-4 d-flex flex-column align-items-center">
-              <svg
-                aria-label="Placeholder"
-                className="spacingLeft bd-placeholder-img rounded-circle"
-                height="140"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="140"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect
-                  width="100%"
-                  height="100%"
-                  fill="var(--bs-secondary-color)"
-                ></rect>
-              </svg>{" "}
-              <h2 className="fw-normal spacingLeft">Patient Admission</h2>
-              <p>
-                Process of admitting patients to the hospital for treatment,
-                including registration, assessment, and room
-              </p>
-              <p>
-                <NavLink className="spacingLeft" to="#">
-                  Read more »
-                </NavLink>
-              </p>{" "}
+          <div className="row justify-content-center gap-4">
+            {/* Patient Admission Card */}
+            <div
+              className="card shadow"
+              style={{
+                width: "18rem",
+                backgroundColor: "#f0f8ff",
+                borderRadius: "12px",
+                border: "2px solid #4a90e2",
+              }}
+            >
+              <div className="card-body">
+                <div className="col-lg-12 d-flex flex-column align-items-center">
+                  <svg
+                    aria-label="Placeholder"
+                    className="spacingLeft bd-placeholder-img rounded-circle mb-3"
+                    height="140"
+                    preserveAspectRatio="xMidYMid slice"
+                    role="img"
+                    width="140"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#4a90e2"></rect>
+                  </svg>
+                  <h2
+                    className="fw-bold spacingLeft"
+                    style={{ color: "#2c5aa0" }}
+                  >
+                    Patient Admission
+                  </h2>
+                  <p className="text-center" style={{ color: "#5a6c7d" }}>
+                    Process of admitting patients to the hospital for treatment,
+                    including registration, assessment, and room.
+                  </p>
+                  <NavLink
+                    className="spacingLeft text-decoration-none"
+                    style={{ color: "#4a90e2", fontWeight: "600" }}
+                    to="#"
+                  >
+                    Read more »
+                  </NavLink>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-4 d-flex flex-column align-items-center">
-              <svg
-                aria-label="Placeholder"
-                className=" spacingLeft bd-placeholder-img rounded-circle"
-                height="140"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="140"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Placeholder</title>
-                <rect
-                  width="100%"
-                  height="100%"
-                  fill="var(--bs-secondary-color)"
-                ></rect>
-              </svg>{" "}
-              <h2 className="fw-normal spacingLeft ">
-                Our Hospitals and Clinics
-              </h2>
-              <p>
-                List of our hospitals and clinics , including their locations,
-                services, and contact information.
-              </p>
-              <p>
-                <NavLink className=" spacingLeft mt-2" to="#">
-                  Find NavLnk near By healthcare center »
-                </NavLink>
-              </p>{" "}
+
+            {/* Center of Excellence Card */}
+            <div
+              className="card shadow"
+              style={{
+                width: "18rem",
+                backgroundColor: "#fff8e1",
+                borderRadius: "12px",
+                border: "2px solid #ff9800",
+              }}
+            >
+              <div className="card-body">
+                <div className="col-lg-12 d-flex flex-column align-items-center">
+                  <svg
+                    aria-label="Placeholder"
+                    className="spacingLeft bd-placeholder-img rounded-circle mb-3"
+                    height="140"
+                    preserveAspectRatio="xMidYMid slice"
+                    role="img"
+                    width="140"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#ff9800"></rect>
+                  </svg>
+                  <h2
+                    className="fw-bold spacingLeft"
+                    style={{ color: "#e65100" }}
+                  >
+                    Center of Excellence
+                  </h2>
+                  <p className="text-center" style={{ color: "#6d4c41" }}>
+                    A specialized center that provides advanced medical care and
+                    treatment in specific areas like cancer, cardiology, or
+                    neurology.
+                  </p>
+                  <NavLink
+                    className="spacingLeft text-decoration-none"
+                    style={{ color: "#ff9800", fontWeight: "600" }}
+                    to="#"
+                  >
+                    Read more »
+                  </NavLink>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-4 d-flex flex-column align-items-center">
-              {" "}
-              <svg
-                aria-label="Placeholder"
-                className="spacingLeft bd-placeholder-img rounded-circle"
-                height="140"
-                preserveAspectRatio="xMidYMid slice"
-                role="img"
-                width="140"
-                xmlns="https://www.hibiscushospitals.co.za/hh/wp-content/uploads/2019/12/Icon-Admission.png"
-              >
-                <title>Placeholder</title>
-                <rect
-                  width="100%"
-                  height="100%"
-                  fill="var(--bs-secondary-color)"
-                ></rect>
-              </svg>
-              <h2 className="spacingLeft fw-normal">Center of Excelence</h2>
-              <p>
-                A specialized center that provides advanced medical care and
-                treatment in NavLnk specific area of healthcare, such as cancer,
-                cardiology, or neurology.
-              </p>{" "}
-              <p>
-                <NavLink className="spacingLeft " to="#">
-                  Read more »
-                </NavLink>
-              </p>{" "}
+
+            {/* Our Hospitals and Clinics Card */}
+            <div
+              className="card shadow"
+              style={{
+                width: "18rem",
+                backgroundColor: "#f1f8e9",
+                borderRadius: "12px",
+                border: "2px solid #4caf50",
+              }}
+            >
+              <div className="card-body">
+                <div className="col-lg-12 d-flex flex-column align-items-center">
+                  <svg
+                    aria-label="Placeholder"
+                    className="spacingLeft bd-placeholder-img rounded-circle mb-3"
+                    height="140"
+                    preserveAspectRatio="xMidYMid slice"
+                    role="img"
+                    width="140"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#4caf50"></rect>
+                  </svg>
+                  <h2
+                    className="fw-bold spacingLeft"
+                    style={{ color: "#2e7d32" }}
+                  >
+                    Our Hospitals & Clinics
+                  </h2>
+                  <p className="text-center" style={{ color: "#558b2f" }}>
+                    Find a list of our hospitals and clinics, including their
+                    locations, services, and contact info.
+                  </p>
+                  <NavLink
+                    className="spacingLeft text-decoration-none"
+                    style={{ color: "#4caf50", fontWeight: "600" }}
+                    to="#"
+                  >
+                    Find nearby healthcare center »
+                  </NavLink>
+                </div>
+              </div>
             </div>
           </div>
-
           <div className="row mt-5 card-grouping">
             <h1 className="m-3 our"> Our Affiliates</h1>
             <div className="card" style={{ width: "18rem" }}>
@@ -241,9 +286,12 @@ const Home = () => {
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active" data-bs-interval="10000">
-                  <img src={displayImg} className="d-block slideShowImage" alt="..." />
+                  <img
+                    src={displayImg}
+                    className="d-block slideShowImage"
+                    alt="..."
+                  />
                   <div className="carousel-caption d-none d-md-block">
-                    
                     <p>
                       Our pediatric care team is dedicated to providing
                       compassionate and specialized care for children of all
@@ -251,22 +299,29 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="carousel-item" data-bs-interval="2000">
-                  <img src={displayImg2} className="d-block slideShowImage" alt="..." />
+                  <img
+                    src={displayImg2}
+                    className="d-block slideShowImage"
+                    alt="..."
+                  />
                   <div className="carousel-caption d-none d-md-block">
-                    
                     <p>
-                      Admission to our hospital is a seamless process,
-                      ensuring that patients receive the care they need without
+                      Admission to our hospital is a seamless process, ensuring
+                      that patients receive the care they need without
                     </p>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img src={displayImg3} className="d-block slideShowImage" alt="..." />
+                  <img
+                    src={displayImg3}
+                    className="d-block slideShowImage"
+                    alt="..."
+                  />
                   <div className="carousel-caption d-none d-md-block">
-                   
                     <p>
                       dedication to excellence in healthcare, our team of
-                      professionals is committed to providing the highest quality
+                      professionals is committed to providing the highest
+                      quality
                     </p>
                   </div>
                 </div>

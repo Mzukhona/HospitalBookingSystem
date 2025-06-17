@@ -6,6 +6,21 @@
     
 }
 .content {
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
+}
+
+.our {
+  color: #0d47a1; /* deep blue heading */
+}
+
+.carousel-caption p {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.content {
   position: absolute;
   background: black;
   opacity: 0.5;
@@ -16,7 +31,8 @@
 }  
 .home-container
 {
-    background-color:#203d8dc2 ;
+    background-color:#f9fafb !important ;
+    color: black !important;
 }
 .spacingLeft
 {

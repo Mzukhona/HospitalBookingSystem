@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({ usernameOrEmail: "", password: "" });
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const Login = () => {
       );
       setMessage("Login successful!");
       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("token", response.data.token); // Assumes response returns { token: "..." }
       navigate("/patientDashboard");
     } catch (error) {
       setMessage("Login failed. Please check your credentials.");
@@ -39,14 +39,14 @@ const Login = () => {
 
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
+                Email address or Username
               </label>
               <input
-                name="username"
+                name="usernameOrEmail"
                 onChange={handleChange}
-                value={formData.username}
+                value={formData.usernameOrEmail}
                 required
-                type="email"
+                type="text"
                 className="form-control"
                 id="exampleInputEmail1"
               />
@@ -68,11 +68,7 @@ const Login = () => {
             </div>
 
             <div className="mb-3 form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
+              <input type="checkbox" className="form-check-input" id="exampleCheck1" />
               <label className="form-check-label" htmlFor="exampleCheck1">
                 Remember me
               </label>
@@ -98,4 +94,3 @@ const Login = () => {
 };
 
 export default Login;
- 
