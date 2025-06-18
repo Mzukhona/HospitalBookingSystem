@@ -3,32 +3,41 @@ import "./Login.css";
 import { Nav } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../Auth/AuthProvider"; 
 
 const Login = () => {
   const [formData, setFormData] = useState({ usernameOrEmail: "", password: "" });
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:3045/api/auth/login",
-        formData
-      );
-      setMessage("Login successful!");
-      console.log(response.data);
-      localStorage.setItem("token", response.data.token); // Assumes response returns { token: "..." }
-      navigate("/patientDashboard");
-    } catch (error) {
-      setMessage("Login failed. Please check your credentials.");
-      console.error(error.response?.data || error.message);
-    }
-  };
+ const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post(
+      "http://localhost:3045/api/auth/login",
+      formData
+    );
+
+    const { token, user } = response.data; 
+
+    
+    localStorage.setItem("token", token);
+
+    
+    login(user); 
+
+    setMessage("Login successful!");
+    navigate("/patientDashboard");
+  } catch (error) {
+    setMessage("Login failed. Please check your credentials.");
+    console.error(error.response?.data || error.message);
+  }
+};
 
   return (
     <div className="container mt-5 mb-3">

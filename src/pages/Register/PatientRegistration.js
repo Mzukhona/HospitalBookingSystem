@@ -52,7 +52,7 @@ const PatientRegistration = ({ userInfo, onPatientRegistered, onBack }) => {
       // Try the primary endpoint first
       let response;
       try {
-        response = await fetch("http://localhost:3045/api/patients/register", {
+      response = await fetch("http://localhost:3045/api/auth/patients/register", {
           method: "POST",
           headers: headers,
           body: JSON.stringify(formData)
@@ -62,7 +62,7 @@ const PatientRegistration = ({ userInfo, onPatientRegistered, onBack }) => {
         
         // Try alternative endpoint paths
         const alternativeEndpoints = [
-          "http://localhost:3045/api/patient/register"
+          "http://localhost:3045/api/auth/patients/register"
         ];
         
         for (const endpoint of alternativeEndpoints) {

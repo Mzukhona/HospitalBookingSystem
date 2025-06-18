@@ -2,6 +2,10 @@
 {
   color: white;
 }
+body
+{
+  color : white !important;
+}
 .hospitalName {
   text-decoration: none;
   margin-right: 20px;

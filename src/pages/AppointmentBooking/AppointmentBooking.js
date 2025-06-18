@@ -16,6 +16,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { format } from 'date-fns';
 import { CalendarToday, AccessTime, Person } from '@mui/icons-material';
+import "./AppointmentBooking.css"
 // import { enqueueSnackbar } from 'notistack';
 
 const AppointmentBooking = () => {
